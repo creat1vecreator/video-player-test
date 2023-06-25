@@ -1,8 +1,7 @@
 import { useEffect, useRef } from 'react';
 
-export const useWebStream = (
-  webStreamRecorder: MediaRecorder | null,
-  setWebStreamRecorder: (webStreamRecorder: MediaRecorder | null) => void,
+export const useWebStreamRecorder = (
+  setBlobVideo: (blob: Blob) => void,
   recordingExpiringTime: number,
 ) => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
